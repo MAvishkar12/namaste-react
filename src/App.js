@@ -409,7 +409,7 @@ const data=[{
 const Applayout = () => {
   return (
     <>
-      <Heading/>c
+      <Heading/>
       <Body/>
     </>
   );

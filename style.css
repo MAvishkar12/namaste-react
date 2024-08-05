@@ -26,21 +26,25 @@
 .resto-container{
     display: flex;
     flex-wrap: wrap;
+    margin-left: 30px;
+    
+    
     
 }
 
 .res-card{
-    width: 200px;
-    height: 300px;
-    margin: 5px;
-    background-color: #d5a278;
+    width: 250px;
+      margin: 5px 10px 4px 0px;
+      
+    background-image: linear-gradient(rgb(164, 244, 222), rgb(251, 155, 197));
     padding: 5px;
     cursor: pointer;
+    color: red;
 }
 .res-card:hover{
-    border: 1px solid black;
-    border-radius: 3px;
-    box-shadow:-3px -4px rgb(233, 129, 129), 3px 4px rgb(229, 106, 106);
+    border: 1px solid greenyellow;
+    border-radius: 6px;
+    box-shadow:-3px -4px 5px rgb(246, 205, 117), 3px 4px rgb(221, 229, 106);
 }
 .search{
     padding: 10px;
@@ -55,4 +59,51 @@
 .filter-btn{
     margin: 10px;
     cursor: pointer;
+}
+
+/* Shimer design */
+
+.sh-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sh-card{
+    width: 200px;
+    height: 300px;
+    margin: 5px;
+    background-color:rgb(217, 204, 204) ;
+}
+
+/* Login Button */
+.btn-l{
+      padding: 8px;
+      background-color: rgb(46, 46, 235);
+      color: white;
+      border-radius: 8px;
+     
+}
+.btn-l:hover{
+    box-shadow: 5px 5px 10px gray;
+    overflow: hidden;
+}
+.search-input{
+    padding: 5px;
+    border-radius: 4px;
+    border: 2px solid red;
+}
+.search-btn{
+   padding: 5px;
+    background-color: rgb(226, 46, 235);
+    color: white;
+    border-radius: 8px;
+    margin-left: 5px;
+}
+.body{
+    margin-top: 5px;
+    
+   
+}
+.feature-container{
+    display: flex;
 }
