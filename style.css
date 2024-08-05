@@ -16,11 +16,16 @@
     font-size: 26px;
       display: flex;
       justify-content: space-between;
+      list-style: none;
+      text-decoration: none;
+      
 }
 
-.nav-items ul li{
+.nav-items > ul > li{
    padding: 0px 10px;
-    list-style: none;
+    text-decoration: none;
+    color: black;
+    
 }
 
 .resto-container{

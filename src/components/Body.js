@@ -8,20 +8,16 @@ const Body = () => {
 
   useEffect(() => {
     fetchdata();
-  }, [setlistResturnat, setfeatureResturant, setSearchText]);
+  }, []);
 
   const fetchdata = async () => {
     const data = await fetch(
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.530263&lng=73.84985879999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
-    
-    
-    
 
     const Jsondata = await data.json();
     console.log(Jsondata);
-    
-  
+
     setlistResturnat(
       Jsondata?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants
@@ -32,7 +28,7 @@ const Body = () => {
     );
   };
 
-  return listRestaurant.length=== 0 ? (
+  return listRestaurant.length === 0 ? (
     <Shimmer />
   ) : (
     <div className="body">
@@ -57,30 +53,42 @@ const Body = () => {
         </button>
       </div>
       <div className="feature-container">
-      <div className="filter">
-        <button
-          className="filter-btn"
-          onClick={() => {
-            setfeatureResturant(
-              listRestaurant.filter((val) => val.info.avgRating > 4.5)
-            );
-          }}
-        >
-          Top Rated Resturants
-        </button>
-      </div>
-      <div className="filter">
-        <button
-          className="filter-btn"
-          onClick={() => {
-            setfeatureResturant(
-              listRestaurant.filter((val) => val.info.isOpen=true)
-            );
-          }}
-        >
-          Open
-        </button>
-      </div>
+        <div className="filter">
+          <button
+            className="filter-btn"
+            onClick={() => {
+              setfeatureResturant(
+                listRestaurant.filter((val) => val.info.avgRating > 4.5)
+              );
+            }}
+          >
+            Top Rated Resturants
+          </button>
+        </div>
+        <div className="filter">
+          <button
+            className="filter-btn"
+            onClick={() => {
+              setfeatureResturant(
+                listRestaurant.filter((val) => val.info.sla.deliveryTime <= 35)
+              );
+            }}
+          >
+            Near
+          </button>
+        </div>
+        <div className="filter">
+          <button
+            className="filter-btn"
+            onClick={() => {
+              setfeatureResturant(
+                listRestaurant.filter((val) => val.info.sla.deliveryTime >= 35)
+              );
+            }}
+          >
+            Long
+          </button>
+        </div>
       </div>
       <div className="resto-container">
         {featureRestaurant.map((value) => {
