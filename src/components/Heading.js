@@ -1,6 +1,7 @@
 import { LOGO_cdn } from "../utils/constant";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import React from "react";
 const Heading = () => {
   const [loginbtn, setloginbtn] = useState("Login");
   useEffect(() => {

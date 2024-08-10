@@ -1,5 +1,5 @@
 import { Cloud_Id } from "../utils/constant";
-
+import React from "react";
 const RestaurantCard = (props) => {
   const { resdata } = props;
 

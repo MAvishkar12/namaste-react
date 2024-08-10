@@ -68,7 +68,6 @@
     "nth-check": "^2.1.1",
     "nullthrows": "^1.1.1",
     "ordered-binary": "^1.5.1",
-    "parcel": "^2.12.0",
     "parent-module": "^1.0.1",
     "parse-json": "^5.2.0",
     "picocolors": "^1.0.1",
@@ -113,5 +112,11 @@
     "Javscript"
   ],
   "author": "Avishkar More",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^7.0.4",
+    "parcel": "^2.12.0",
+    "parcel-bundler": "^1.12.5",
+    "postcss": "^8.4.40"
+  }
 }
