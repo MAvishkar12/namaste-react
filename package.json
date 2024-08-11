@@ -2,8 +2,9 @@
   "name": "challange",
   "version": "1.0.0",
   "description": "This is React Course ",
-  "main": "App.js",
+  "main": "index.html",
   "dependencies": {
+
     "abortcontroller-polyfill": "^1.7.5",
     "ansi-styles": "^4.3.0",
     "argparse": "^2.0.1",

@@ -2,11 +2,15 @@ import { LOGO_cdn } from "../utils/constant";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import React from "react";
+import useOnlineStatus from "../utils/useOnlineStatus";
+
 const Heading = () => {
   const [loginbtn, setloginbtn] = useState("Login");
   useEffect(() => {
     console.log("Login /Logout ");
   }, [loginbtn]);
+  const Online = useOnlineStatus();
+
   return (
     <div className="header">
       <div className="logo-container">
@@ -14,6 +18,7 @@ const Heading = () => {
       </div>
       <div className="nav-items">
         <ul>
+          <li>Online Status:{Online ? "Online" : "Offline"}</li>
           <li>
             <Link to={"/"}>Home</Link>
           </li>
@@ -22,6 +27,9 @@ const Heading = () => {
           </li>
           <li>
             <Link to={"/contact"}>Contact</Link>
+          </li>
+          <li>
+            <Link to={"/grocery"}>Grocery</Link>
           </li>
           <li>Cards</li>
           <button
