@@ -21,11 +21,11 @@ const Body = () => {
     console.log(Jsondata);
 
     setlistResturnat(
-      Jsondata?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+      Jsondata?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants
     );
     setfeatureResturant(
-      Jsondata?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+      Jsondata?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants
     );
   };
