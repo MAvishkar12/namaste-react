@@ -12,13 +12,13 @@ const Heading = () => {
   const Online = useOnlineStatus();
 
   return (
-    <div className="header">
-      <div className="logo-container">
+    <div className="header" >
+      <div className="">
         <img className="logo" src={LOGO_cdn} />
       </div>
       <div className="nav-items">
         <ul>
-          <li>Online Status:{Online ? "Online" : "Offline"}</li>
+          <li >Online Status:{Online ? "Online" : "Offline"}</li>
           <li>
             <Link to={"/"}>Home</Link>
           </li>

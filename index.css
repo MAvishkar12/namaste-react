@@ -41,7 +41,7 @@
     width: 200px;
     height: auto;
      margin: 5px 10px 4px 0px;
-      
+    
     background-image: linear-gradient(rgb(164, 244, 222), rgb(251, 155, 197));
     padding: 5px;
     cursor: pointer;
@@ -51,6 +51,18 @@
     border: 1px solid greenyellow;
     border-radius: 6px;
     box-shadow:-3px -4px 5px rgb(246, 205, 117), 3px 4px rgb(221, 229, 106);
+}
+.label{
+    border: 2px solid black;
+    border-radius: 3px;
+    color: white;
+    background-color: gray;
+    padding: 4px;
+    text-decoration: none;
+    margin-top: 8px;
+    position: absolute
+    
+    
 }
 .search{
     padding: 10px;

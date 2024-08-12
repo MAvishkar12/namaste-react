@@ -4,7 +4,6 @@
   "description": "This is React Course ",
   "main": "index.html",
   "dependencies": {
-
     "abortcontroller-polyfill": "^1.7.5",
     "ansi-styles": "^4.3.0",
     "argparse": "^2.0.1",
@@ -115,9 +114,11 @@
   "author": "Avishkar More",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^10.4.20",
     "cssnano": "^7.0.4",
     "parcel": "^2.12.0",
     "parcel-bundler": "^1.12.5",
-    "postcss": "^8.4.40"
+    "postcss": "^8.4.41"
+   
   }
 }

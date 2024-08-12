@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard ,{OpenRestaurantCard}from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import { useEffect, useState } from "react";
 import React from "react";
@@ -8,6 +8,9 @@ const Body = () => {
   const [listRestaurant, setlistResturnat] = useState([]);
   const [featureRestaurant, setfeatureResturant] = useState([]);
   const [SearchText, setSearchText] = useState("");
+  console.log(listRestaurant);
+  
+  const RestaurantOpen=OpenRestaurantCard(RestaurantCard);
 
   const OnlineStatus = useOnlineStatus();
   useEffect(() => {
@@ -20,7 +23,6 @@ const Body = () => {
     );
 
     const Jsondata = await data.json();
-    console.log(Jsondata);
 
     setlistResturnat(
       Jsondata?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
@@ -101,8 +103,10 @@ const Body = () => {
       <div className="resto-container">
         {featureRestaurant.map((value) => (
           <Link to={"/rest/" + value.info.id} key={value.info.id}>
-            {" "}
-            <RestaurantCard resdata={value} />{" "}
+            {
+              value.info.availability.opened?<RestaurantOpen resdata={value} /> :<RestaurantCard resdata={value}></RestaurantCard>
+            }
+             
           </Link>
         ))}
       </div>
