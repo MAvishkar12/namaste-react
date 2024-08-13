@@ -80,7 +80,7 @@ const Body = () => {
             className="filter-btn"
             onClick={() => {
               setfeatureResturant(
-                listRestaurant.filter((val) => val.info.sla.deliveryTime <= 35)
+                listRestaurant.filter((val) => val.info.sla.deliveryTime <=20)
               );
             }}
           >

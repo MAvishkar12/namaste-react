@@ -13,12 +13,12 @@ const Heading = () => {
 
   return (
     <div className="header" >
-      <div className="">
+      <div className="logo">
         <img className="logo" src={LOGO_cdn} />
       </div>
       <div className="nav-items">
         <ul>
-          <li >Online Status:{Online ? "Online" : "Offline"}</li>
+          <li className="text-cyan-50 border-red-800" >Online Status:{Online ? "Online" : "Offline"}</li>
           <li>
             <Link to={"/"}>Home</Link>
           </li>
