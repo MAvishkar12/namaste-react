@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
@@ -7,6 +7,7 @@ import RestaurantCategories from "./RestaurantCategories";
 
 function RestaurantMenu() {
   const { resid } = useParams();
+  const[ShowIndex,setShowIndex]=useState(-1)
 
   const restInfo = useRestaurantMenu(resid);
 
@@ -28,7 +29,12 @@ function RestaurantMenu() {
         <h2 className="card-head">Menu</h2>
       </div>
       {categerious.map((val, index) => (
-        <RestaurantCategories key={index} data={val?.card?.card} />
+        <RestaurantCategories
+          key={index}
+          data={val?.card?.card}
+          showItems={index === ShowIndex? true:false}
+          setShowIndex={()=>setShowIndex(index)}
+        />
       ))}
     </div>
   );

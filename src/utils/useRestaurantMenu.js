@@ -12,7 +12,7 @@ const useRestaurantMenu=(resid)=>{
         let data = await fetch(Menu_data + resid);
         let Jsondata = await data.json();
         setrestInfo(Jsondata.data)
-        console.log(Jsondata.data);
+      
         
       }
 

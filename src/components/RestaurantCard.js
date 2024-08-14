@@ -28,7 +28,7 @@ const RestaurantCard = (props) => {
     </div>
   );
 };
-
+// HOC
 export const OpenRestaurantCard=(RestaurantCard)=>{
     return(props)=>{
       return(
