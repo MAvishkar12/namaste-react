@@ -13,7 +13,7 @@ const RestaurantCategories = ({ data,showItems ,setShowIndex}) => {
           <span>
             {data.title} ({data.itemCards.length})
           </span>
-          <span className="click">@</span>
+         
           {showItems && <ItemList item={data.itemCards} />}
         </div>
       </div>

@@ -1,15 +1,17 @@
 import { LOGO_cdn } from "../utils/constant";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import React from "react";
 import useOnlineStatus from "../utils/useOnlineStatus";
-
+import UserContext from "../utils/UserContext";
 const Heading = () => {
   const [loginbtn, setloginbtn] = useState("Login");
   useEffect(() => {
-    console.log("Login /Logout ");
+    
   }, [loginbtn]);
   const Online = useOnlineStatus();
+
+  const {logneedUser}=useContext(UserContext)
 
   return (
     <div className="header" >
@@ -42,6 +44,7 @@ const Heading = () => {
           >
             {loginbtn}
           </button>
+          <li>User : {logneedUser}</li>
         </ul>
       </div>
     </div>

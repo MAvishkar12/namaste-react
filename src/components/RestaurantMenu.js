@@ -7,7 +7,7 @@ import RestaurantCategories from "./RestaurantCategories";
 
 function RestaurantMenu() {
   const { resid } = useParams();
-  const[ShowIndex,setShowIndex]=useState(-1)
+  const[ShowIndex,setShowIndex]=useState(0)
 
   const restInfo = useRestaurantMenu(resid);
 

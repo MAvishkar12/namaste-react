@@ -1,16 +1,17 @@
-import RestaurantCard ,{OpenRestaurantCard}from "./RestaurantCard";
+import RestaurantCard, { OpenRestaurantCard } from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import { useEffect, useState } from "react";
 import React from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+
 const Body = () => {
   const [listRestaurant, setlistResturnat] = useState([]);
   const [featureRestaurant, setfeatureResturant] = useState([]);
   const [SearchText, setSearchText] = useState("");
   console.log(listRestaurant);
-  
-  const RestaurantOpen=OpenRestaurantCard(RestaurantCard);
+
+  const RestaurantOpen = OpenRestaurantCard(RestaurantCard);
 
   const OnlineStatus = useOnlineStatus();
   useEffect(() => {
@@ -80,7 +81,7 @@ const Body = () => {
             className="filter-btn"
             onClick={() => {
               setfeatureResturant(
-                listRestaurant.filter((val) => val.info.sla.deliveryTime <=20)
+                listRestaurant.filter((val) => val.info.sla.deliveryTime <= 20)
               );
             }}
           >
@@ -103,10 +104,11 @@ const Body = () => {
       <div className="resto-container">
         {featureRestaurant.map((value) => (
           <Link to={"/rest/" + value.info.id} key={value.info.id}>
-            {
-              value.info.availability.opened?<RestaurantOpen resdata={value} /> :<RestaurantCard resdata={value}></RestaurantCard>
-            }
-             
+            {value.info.availability.opened ? (
+              <RestaurantOpen resdata={value} />
+            ) : (
+              <RestaurantCard resdata={value}></RestaurantCard>
+            )}
           </Link>
         ))}
       </div>
