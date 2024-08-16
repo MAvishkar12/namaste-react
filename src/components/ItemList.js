@@ -1,6 +1,16 @@
 import React from "react";
 import { Cloud_Id } from "../utils/constant";
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/cardSlice";
 const ItemList = ({ item }) => {
+
+
+  const dispatch=useDispatch();
+  const handleAdd=(val)=>{
+     dispatch(addItem(val))
+  }
+
+  
   return (
     <>
       {item.map((val) => (
@@ -11,15 +21,15 @@ const ItemList = ({ item }) => {
               className="item-img"
               src={Cloud_Id + val.card.info.imageId}
             ></img>
-            <button className="item-btn">Add+</button>
+            <button className="item-btn" onClick={()=>handleAdd(val)}>Add+</button>
           </div>
           <div className="item-info ">
-            <spann className="item-h1">
+            <span className="item-h1">
               {val.card.info.name} -Rs.
               {val.card.info.price
                 ? val.card.info.price / 100
                 : val.card.info.defaultPrice / 100}
-            </spann>
+            </span>
             <p className="item-para">{val.card.info.description}</p>
           </div>
         </div>
