@@ -1,7 +1,6 @@
 import React from "react";
 import ItemList from "./ItemList";
-const RestaurantCategories = ({ data,showItems ,setShowIndex}) => {
-
+const RestaurantCategories = ({ data, showItems, setShowIndex }) => {
   const handleclick = () => {
     setShowIndex();
   };
