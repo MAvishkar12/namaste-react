@@ -22,7 +22,7 @@ function RestaurantMenu() {
     );
 
   return (
-    <div>
+    <div style={{marginTop:'130px'}}>
       <div className="card-box">
         <h1 className="rest-name"> {name}</h1>
         <h2 className="card-cusine">{cuisines.join(",")}</h2>

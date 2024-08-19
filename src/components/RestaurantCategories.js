@@ -6,8 +6,9 @@ const RestaurantCategories = ({ data, showItems, setShowIndex }) => {
   };
 
   return (
-    <>
-      <div className="card-container">
+    
+    <div  >
+      <div className="card-container" >
         <div className="card-item" onClick={handleclick}>
           <span>
             {data.title} ({data.itemCards.length})
@@ -16,7 +17,8 @@ const RestaurantCategories = ({ data, showItems, setShowIndex }) => {
           {showItems && <ItemList item={data.itemCards} />}
         </div>
       </div>
-    </>
+    </div>
+    
   );
 };
 

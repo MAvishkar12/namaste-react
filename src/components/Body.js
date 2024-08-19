@@ -4,6 +4,9 @@ import { useEffect, useState } from "react";
 import React from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import {Button} from "@mui/material"
+import TextField from '@mui/material/TextField';
+
 
 const Body = () => {
   const [listRestaurant, setlistResturnat] = useState([]);
@@ -44,14 +47,16 @@ const Body = () => {
   ) : (
     <div className="body">
       <div>
-        <input
-          className="search-input"
+      <TextField id="outlined-basic" label="Search" size="small"
           type="text"
           value={SearchText}
-          onChange={(e) => setSearchText(e.target.value)}
-        ></input>
-        <button
+          onChange={(e) => setSearchText(e.target.value)} variant="outlined" />
+       
+        <Button
           className="search-btn"
+          variant="contained"
+          color="success"
+          sx={{marginLeft:'10px'}}
           onClick={() => {
             setfeatureResturant(
               listRestaurant.filter((val) =>
@@ -61,12 +66,15 @@ const Body = () => {
           }}
         >
           Search
-        </button>
+        </Button>
       </div>
       <div className="feature-container">
         <div className="filter">
-          <button
+          <Button
             className="filter-btn"
+            variant="outlined"
+            sx={{margin:"5px"}}
+            size="small"
             onClick={() => {
               setfeatureResturant(
                 listRestaurant.filter((val) => val.info.avgRating > 4.5)
@@ -74,10 +82,13 @@ const Body = () => {
             }}
           >
             Top Rated Resturants
-          </button>
+          </Button>
         </div>
         <div className="filter">
-          <button
+          <Button
+           variant="outlined"
+           sx={{margin:"5px"}}
+           size="small"
             className="filter-btn"
             onClick={() => {
               setfeatureResturant(
@@ -86,10 +97,13 @@ const Body = () => {
             }}
           >
             Near
-          </button>
+          </Button>
         </div>
         <div className="filter">
-          <button
+          <Button
+           variant="outlined"
+           sx={{margin:"5px"}}
+           size="small"
             className="filter-btn"
             onClick={() => {
               setfeatureResturant(
@@ -98,12 +112,12 @@ const Body = () => {
             }}
           >
             Long
-          </button>
+          </Button>
         </div>
       </div>
       <div className="resto-container">
         {featureRestaurant.map((value) => (
-          <Link to={"/rest/" + value.info.id} key={value.info.id}>
+          <Link to={"/rest/" + value.info.id} key={value.info.id} className="link">
             {value.info.availability.opened ? (
               <RestaurantOpen resdata={value} />
             ) : (
@@ -112,6 +126,7 @@ const Body = () => {
           </Link>
         ))}
       </div>
+      
     </div>
   );
 };

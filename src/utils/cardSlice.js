@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const cardSlice = createSlice({
   name: "cart",
   initialState: {
-    items: [],
+    items:[],
   },
   reducers: {
     addItem: (state, action) => {
