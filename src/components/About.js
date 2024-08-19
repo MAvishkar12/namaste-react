@@ -31,7 +31,7 @@ const About = () => {
   
 
   return (
-    <div style={{marginTop:'130px',display:'flex' ,flexDirection:'column',justifyContent:'center' ,alignContent:'center',scrollbarColor:'auto'}}>
+    <div style={{marginTop:'130px',display:'flex' ,flexDirection:'column',justifyContent:'center' ,alignContent:'center',scrollbarColor:'auto',backgroundColor:'#fafafa'}}>
       <Box component="section" sx={{ p: 2, border: '1px dashed grey',textAlign:'center',fontSize:'10', boxShadow: 'inset 0px 4px 10px rgba(0, 0, 255, 0.5)',position:"sticky" }}>
       Top Most Resturants in Pune City..!
     </Box>

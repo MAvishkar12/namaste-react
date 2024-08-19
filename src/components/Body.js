@@ -45,7 +45,7 @@ const Body = () => {
   return listRestaurant.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="body">
+    <div className="body" style={{backgroundColor:'#fafafa'}}>
       <div>
       <TextField id="outlined-basic" label="Search" size="small"
           type="text"

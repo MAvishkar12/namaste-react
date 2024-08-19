@@ -4,7 +4,7 @@ import ItemList from "./ItemList";
 import { useDispatch } from "react-redux";
 import { clearCard } from "../utils/cardSlice";
 import Button from '@mui/material/Button';
-import Box from '@mui/material/Box';
+
 const Cart = () => {
   const dispatch = useDispatch();
 
@@ -14,7 +14,7 @@ const Cart = () => {
 
   const cards = useSelector((store) => store.cart.items);
   return (
-    <div style={{marginTop:'130px',textAlign:'center'}}>
+    <div style={{marginTop:'130px',textAlign:'center',backgroundColor:'#b0bec5'}}>
       <h1>Your Items</h1>
       <Button className=".search-btn"  variant="contained" onClick={handleClear}>
         Clear

@@ -31,6 +31,7 @@ const RestaurantCard = (props) => {
         marginLeft: 6,
         marginTop: 2,
         boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
+        backgroundColor:"#80cbc4",
       }}
     >
       <CardOverflow>

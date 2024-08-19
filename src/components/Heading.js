@@ -10,7 +10,7 @@ import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import Button from "@mui/material/Button";
 import WifiIcon from "@mui/icons-material/Wifi";
 import WifiOffIcon from "@mui/icons-material/WifiOff";
-
+import PersonIcon from "@mui/icons-material/Person";
 const Heading = () => {
   const [loginbtn, setloginbtn] = useState("Login");
   useEffect(() => {}, [loginbtn]);
@@ -20,7 +20,7 @@ const Heading = () => {
   const cards = useSelector((store) => store.cart.items);
 
   return (
-    <div className="header">
+    <div className="header" style={{ backgroundColor: "#ffab91" }}>
       <div className="logo">
         <img className="logo" src={LOGO_cdn} />
       </div>
@@ -69,7 +69,12 @@ const Heading = () => {
           >
             {loginbtn}
           </Button>
-          <li>User : {logneedUser}</li>
+          <li>
+            <IconButton color="primary" aria-label="add to shopping cart">
+              <PersonIcon />
+            </IconButton>
+            : {logneedUser}
+          </li>
         </ul>
       </div>
     </div>
