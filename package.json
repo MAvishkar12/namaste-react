@@ -1,5 +1,5 @@
 {
-   "homepage": "https://MAvishkar12.github.io/namaste-react",
+  "homepage": "https://MAvishkar12.github.io/namaste-react",
   "name": "challange",
   "version": "1.0.0",
   "description": "This is React Course ",
@@ -20,7 +20,7 @@
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
-    "predeploy": "npm run build",
+   "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "test": "jest"
   },
