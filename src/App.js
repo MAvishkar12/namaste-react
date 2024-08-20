@@ -12,6 +12,7 @@ import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
 import Cart from "./components/Cart";
 
+
 const App = () => {
   const [userName, setUserName] = useState();
 
@@ -75,4 +76,4 @@ const approuter = createBrowserRouter([
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<RouterProvider router={approuter} />);
+root.render( <RouterProvider router={approuter} />);
