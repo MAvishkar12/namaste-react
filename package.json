@@ -3,7 +3,7 @@
   "name": "challange",
   "version": "1.0.0",
   "description": "This is React Course ",
-  "main": "App.js",
+  "main": "index.html",
   "dependencies": {
     "@emotion/react": "^11.13.0",
     "@emotion/styled": "^11.13.0",
