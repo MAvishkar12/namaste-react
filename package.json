@@ -1,4 +1,5 @@
 {
+   "homepage": "https://MAvishkar12.github.io/namaste-react",
   "name": "challange",
   "version": "1.0.0",
   "description": "This is React Course ",
@@ -19,6 +20,8 @@
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "jest"
   },
   "keywords": [
@@ -33,7 +36,9 @@
     "@testing-library/react": "^16.0.0",
     "babel-jest": "^29.7.0",
     "cssnano": "^7.0.4",
+    "gh-pages": "^6.1.1",
     "parcel": "^2.12.0",
     "process": "^0.11.10"
   }
+  
 }
