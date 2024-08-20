@@ -8,7 +8,7 @@
     "start": "parcel index.html",
     "build": "parcel build index.html"
   },
-  "author": "Parshuram Bagade",
+  "author": "Avishkar More",
   "license": "ISC",
   "dependencies": {
     "@reduxjs/toolkit": "^2.0.1",
