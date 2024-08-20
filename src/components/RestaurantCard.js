@@ -46,7 +46,7 @@ const RestaurantCard = (props) => {
       </CardOverflow>
       <CardContent>
         <Typography level="title-md">{name}</Typography>
-        <Typography level="body-sm">{cuisines}</Typography>
+        <Typography level="body-sm">{cuisines.join(" , ")}</Typography>
         <Rating
           name="half-rating-read"
           defaultValue={avgRating}
